@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header – Big Ash Fireplaces &amp; Stoves</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { inter: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { red: '#e2334e' },
+                        heading: '#1a1a1a',
+                        nav: '#1a1a1a',
+                        body: '#6a6e73',
+                        topbar: { link: '#a8a8a8', dot: '#3a3a3a' },
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="font-inter">
+
+    <header class="w-full bg-white border-b border-[#eee] sticky top-0 z-50">
+
+        <!-- Top Bar -->
+        <div class="hidden md:block bg-[#111111]">
+            <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16 flex items-center justify-between h-6 py-0">
+                <div class="flex items-center gap-0">
+                    <a href="#"
+                        class="text-topbar-link text-base leading-6 hover:text-white transition-colors duration-200 pr-4">Resources</a>
+                    <span class="text-topbar-dot text-base pr-4">·</span>
+                    <a href="#"
+                        class="text-topbar-link text-base leading-6 hover:text-white transition-colors duration-200 pr-4">Service
+                        Area</a>
+                    <span class="text-topbar-dot text-base pr-4">·</span>
+                    <a href="#"
+                        class="text-topbar-link text-base leading-6 hover:text-white transition-colors duration-200">We're
+                        Hiring</a>
+                </div>
+                <a href="tel:5856380300"
+                    class="text-brand-red text-lg font-semibold leading-6 hover:brightness-110 transition-all duration-200">585-638-0300</a>
+            </div>
+        </div>
+
+        <!-- Main Nav -->
+        <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16 flex items-center justify-between h-16 md:h-[67px]">
+
+            <!-- Logo — Cloudflare flexible variant (fit=scale-down) -->
+            <a href="#" class="flex-shrink-0">
+                <img src="https://images.adept.plus/BigAshFireplace-NY/big-ash-logo/w=141,fit=scale-down"
+                    srcset="
+                        https://images.adept.plus/BigAshFireplace-NY/big-ash-logo/w=120,fit=scale-down 120w,
+                        https://images.adept.plus/BigAshFireplace-NY/big-ash-logo/w=141,fit=scale-down 141w,
+                        https://images.adept.plus/BigAshFireplace-NY/big-ash-logo/w=200,fit=scale-down 200w
+                    "
+                    sizes="(max-width: 768px) 120px, 141px"
+                    loading="eager"
+                    decoding="async"
+                    width="141" height="67"
+                    alt="Big Ash Fireplaces and Stoves logo"
+                    class="h-10 md:h-[67px] w-auto max-w-[141px] object-contain" />
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden xl:flex items-center gap-8">
+                <a href="#"
+                    class="text-nav text-[15px] font-medium leading-[22.5px] hover:text-brand-red transition-colors duration-200">Products</a>
+                <a href="#"
+                    class="text-nav text-[15px] font-medium leading-[22.5px] hover:text-brand-red transition-colors duration-200">Services</a>
+                <a href="#"
+                    class="text-nav text-[15px] font-medium leading-[22.5px] hover:text-brand-red transition-colors duration-200">Outdoor
+                    Living</a>
+                <a href="#"
+                    class="text-nav text-[15px] font-medium leading-[22.5px] hover:text-brand-red transition-colors duration-200">Showroom</a>
+                <a href="#"
+                    class="text-nav text-[15px] font-medium leading-[22.5px] hover:text-brand-red transition-colors duration-200">Contact</a>
+                <a href="#"
+                    class="text-nav text-[15px] font-medium leading-[22.5px] hover:text-brand-red transition-colors duration-200">About</a>
+            </nav>
+
+            <!-- CTA -->
+            <a href="#"
+                class="hidden lg:inline-flex items-center justify-center bg-brand-red text-white text-[15px] font-semibold tracking-[0.6px] px-8 h-[50.5px] min-w-[256px] hover:brightness-95 hover:scale-[1.02] transition-all duration-200">
+                Request an Appointment
+            </a>
+
+            <!-- Mobile menu button -->
+            <button onclick="toggleMobileNav()" class="xl:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+                <span id="bar1" class="w-6 h-0.5 bg-gray-800 transition-transform"></span>
+                <span id="bar2" class="w-6 h-0.5 bg-gray-800 transition-opacity"></span>
+                <span id="bar3" class="w-6 h-0.5 bg-gray-800 transition-transform"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Panel -->
+        <div id="mobileNav" class="hidden xl:hidden border-t border-gray-100 pb-4">
+            <nav class="flex flex-col gap-1 pt-4 px-4 md:px-8">
+                <a href="#" class="text-nav py-2 text-[15px] font-medium hover:text-brand-red transition-colors">Products</a>
+                <a href="#" class="text-nav py-2 text-[15px] font-medium hover:text-brand-red transition-colors">Services</a>
+                <a href="#" class="text-nav py-2 text-[15px] font-medium hover:text-brand-red transition-colors">Outdoor
+                    Living</a>
+                <a href="#" class="text-nav py-2 text-[15px] font-medium hover:text-brand-red transition-colors">Showroom</a>
+                <a href="#" class="text-nav py-2 text-[15px] font-medium hover:text-brand-red transition-colors">Contact</a>
+                <a href="#" class="text-nav py-2 text-[15px] font-medium hover:text-brand-red transition-colors">About</a>
+                <a href="tel:5856380300"
+                    class="text-brand-red font-semibold py-2 hover:brightness-110 transition-all">585-638-0300</a>
+                <a href="#"
+                    class="bg-brand-red text-white text-center py-3 font-semibold mt-2 hover:brightness-95 hover:scale-[1.02] transition-all duration-200">
+                    Request an Appointment
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        function toggleMobileNav() {
+            document.getElementById('mobileNav').classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+
+</html>
