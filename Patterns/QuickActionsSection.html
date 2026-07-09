@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Actions – Big Ash Fireplaces &amp; Stoves</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                        barlow: ['Barlow Condensed', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: { red: '#e2334e' },
+                        heading: '#1a1a1a',
+                        surface: '#f7f7f7',
+                        border: '#dddddd',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="font-inter">
+
+    <section class="w-full bg-surface py-0 overflow-hidden">
+        <div class="max-w-[1280px] mx-auto px-0 md:px-8 lg:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 border-r border-border">
+
+                <!-- Showroom -->
+                <a href="#"
+                    class="group flex flex-col justify-center border-l border-border bg-surface px-8 py-7 md:py-8 min-h-[136px] hover:bg-white transition-all duration-300 hover:-translate-y-0.5">
+                    <span
+                        class="text-brand-red text-[13px] font-semibold uppercase tracking-[1.82px] mb-1.5 group-hover:text-brand-red/80 transition-colors">Showroom</span>
+                    <span
+                        class="font-barlow text-[22px] font-semibold leading-[24.2px] text-heading group-hover:text-brand-red transition-colors duration-200">Visit
+                        Our Showroom</span>
+                    <span
+                        class="text-brand-red text-base mt-1.5 group-hover:translate-x-1 transition-transform duration-200 inline-block">→</span>
+                </a>
+
+                <!-- Products -->
+                <a href="#"
+                    class="group flex flex-col justify-center border-l border-border bg-surface px-8 py-7 md:py-8 min-h-[136px] hover:bg-white transition-all duration-300 hover:-translate-y-0.5">
+                    <span
+                        class="text-brand-red text-[13px] font-semibold uppercase tracking-[1.82px] mb-1.5 group-hover:text-brand-red/80 transition-colors">Products</span>
+                    <span
+                        class="font-barlow text-[22px] font-semibold leading-[24.2px] text-heading group-hover:text-brand-red transition-colors duration-200">Browse
+                        Fireplaces &amp; Stoves</span>
+                    <span
+                        class="text-brand-red text-base mt-1.5 group-hover:translate-x-1 transition-transform duration-200 inline-block">→</span>
+                </a>
+
+                <!-- Services -->
+                <a href="#"
+                    class="group flex flex-col justify-center border-l border-border bg-surface px-8 py-7 md:py-8 min-h-[136px] hover:bg-white transition-all duration-300 hover:-translate-y-0.5">
+                    <span
+                        class="text-brand-red text-[13px] font-semibold uppercase tracking-[1.82px] mb-1.5 group-hover:text-brand-red/80 transition-colors">Services</span>
+                    <span
+                        class="font-barlow text-[22px] font-semibold leading-[24.2px] text-heading group-hover:text-brand-red transition-colors duration-200">Schedule
+                        a Service</span>
+                    <span
+                        class="text-brand-red text-base mt-1.5 group-hover:translate-x-1 transition-transform duration-200 inline-block">→</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
